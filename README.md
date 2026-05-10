@@ -80,8 +80,6 @@ resources:
 & "C:\Program Files\Git\cmd\git.exe" push -u origin main
 ```
 
-4. 到 GitHub 仓库的 Settings > Pages，把 Source 设置为 GitHub Actions。
+4. 到 GitHub 仓库的 Settings > Pages，确认 Source 是 `Deploy from a branch`，Branch 是 `gh-pages`，目录是 `/ (root)`。
 
-之后每次推送，`.github/workflows/hugo.yaml` 会自动构建并发布。
-
-部署工作流会自动使用 GitHub Pages 提供的真实地址作为 `baseURL`。只有你不用这个工作流、改成手动构建时，才需要把 `hugo.toml` 里的 `baseURL` 改成公开站点地址。
+之后每次推送，`.github/workflows/hugo.yaml` 会自动构建并更新 `gh-pages` 发布分支。
