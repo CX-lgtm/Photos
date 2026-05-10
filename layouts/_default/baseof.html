@@ -1,0 +1,16 @@
+<!doctype html>
+{{- $theme := .Params.theme | default .Site.Params.defaultTheme }}
+<html class="{{- if (eq $theme "light") -}}light{{- else if (eq $theme "dark") }}dark{{ end }}" lang="{{- site.Language.Locale | default "zh-cn" -}}">
+  {{ partial "head.html" . }}
+  <body{{ if .IsHome }} class="is-home"{{ end }}>
+    {{ if not .IsHome }}
+      {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    {{ end }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ if not .IsHome }}
+      {{ block "footer" . }}{{ partialCached "footer.html" . }}{{ end }}
+    {{ end }}
+  </body>
+</html>
