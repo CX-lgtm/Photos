@@ -1,0 +1,59 @@
+baseURL = 'http://localhost:1313/'
+copyright = '(c) Your Name'
+defaultContentLanguage = 'zh-cn'
+enableRobotsTXT = true
+locale = 'zh-cn'
+timeZone = 'Asia/Tokyo'
+timeout = '120s'
+title = '摄影作品集'
+theme = 'gallery'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML']
+
+[imaging]
+  quality = 78
+  resampleFilter = 'CatmullRom'
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = 'ImageDescription|Orientation'
+
+[params]
+  defaultTheme = 'dark'
+  description = '本地掌控照片数据的零成本摄影博客与作品集。'
+  title = '光影手记'
+  [params.author]
+    name = 'Your Name'
+    email = 'you@example.com'
+  [params.gallery]
+    targetRowHeight = 320
+    targetRowHeightTolerance = 0.25
+  [params.socialIcons]
+    email = 'mailto:you@example.com'
+    instagram = 'https://www.instagram.com/'
+    github = 'https://github.com/'
+
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = false
+  [[related.indices]]
+    name = 'categories'
+    type = 'basic'
+    weight = 10
+  [[related.indices]]
+    name = 'keywords'
+    type = 'basic'
+    weight = 50

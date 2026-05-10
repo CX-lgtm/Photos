@@ -1,0 +1,12 @@
+public/
+resources/_gen/
+assets/jsconfig.json
+.hugo_build.lock
+hugo-server.*.log
+Thumbs.db
+.DS_Store
+
+# Keep original RAW/high-resolution photo archives local.
+photos_raw/*
+!photos_raw/README.md
+raw_edit_output/

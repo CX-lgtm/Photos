@@ -1,0 +1,11 @@
+:root {
+  --surface-rgb: 15, 17, 20;
+}
+
+.site-title {
+  letter-spacing: 0;
+}
+
+.prose {
+  line-height: 1.78;
+}
