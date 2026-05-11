@@ -1,0 +1,25 @@
+export const fallbackArticle = {
+  id: 1,
+  title: 'Storm light by the lake',
+  slug: 'storm-light',
+  summary: 'A quiet sample entry for testing the new full-stack photography journal.',
+  coverUrl: '/images/cover.jpg',
+  content: '<p>This entry is shown when the backend is not running yet. Once the Spring Boot API is online, the frontend will load articles, comments, categories, and tags from MySQL.</p>',
+  status: 'PUBLISHED',
+  publishedAt: '2026-05-08T22:21:00',
+  categories: [{ id: 1, name: 'Portrait', slug: 'portrait' }],
+  tags: [{ id: 1, name: 'Light', slug: 'light', color: '#2563eb' }]
+}
+
+export const fallbackArticles = [fallbackArticle]
+
+export const fallbackCategories = [
+  { id: 1, name: 'Portrait', slug: 'portrait', description: 'People, gesture, and emotion.', sortOrder: 10 },
+  { id: 2, name: 'City', slug: 'city', description: 'Streets, architecture, and daily rhythm.', sortOrder: 20 }
+]
+
+export const fallbackTags = [
+  { id: 1, name: 'Light', slug: 'light', color: '#2563eb' },
+  { id: 2, name: 'Travel', slug: 'travel', color: '#0ea5e9' },
+  { id: 3, name: 'Editing', slug: 'editing', color: '#38bdf8' }
+]

@@ -1,4 +1,4 @@
-public/
+/public/
 resources/_gen/
 assets/jsconfig.json
 .hugo_build.lock
@@ -10,3 +10,14 @@ Thumbs.db
 photos_raw/*
 !photos_raw/README.md
 raw_edit_output/
+
+# Vue frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Spring Boot backend
+backend/target/
+backend/.env
+backend/uploads/
+uploads/
