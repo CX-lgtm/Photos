@@ -32,6 +32,20 @@ Cloudflare Pages settings:
 
 The SPA fallback is configured in `frontend/public/_redirects`.
 
+GitHub Pages is also configured through `.github/workflows/frontend-pages.yml`.
+After the workflow runs, enable Pages in the GitHub repository settings:
+
+- Source: `Deploy from a branch`
+- Branch: `gh-pages`
+- Folder: `/ (root)`
+
+Then open:
+
+- Homepage: `https://cx-lgtm.github.io/Photos/`
+- Admin login: `https://cx-lgtm.github.io/Photos/admin/login`
+
+Set the repository variable `VITE_API_BASE_URL` to your deployed backend URL so login, upload, comments, and article management can talk to Spring Boot.
+
 ## Backend
 
 Install Java 17, Maven, and MySQL 8 first.

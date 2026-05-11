@@ -20,12 +20,13 @@ request.interceptors.response.use(
   (error) => {
     const status = error.response?.status
     const message = error.response?.data?.message || error.message || 'Request failed'
+    const silentError = error.config?.silentError === true
     if (status === 401) {
       clearSession()
       if (!location.pathname.includes('/admin/login')) {
         location.href = `/admin/login?redirect=${encodeURIComponent(location.pathname)}`
       }
-    } else {
+    } else if (!silentError) {
       ElMessage.error(message)
     }
     return Promise.reject(error)
