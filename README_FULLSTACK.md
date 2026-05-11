@@ -44,6 +44,8 @@ Then open:
 - Homepage: `https://cx-lgtm.github.io/Photos/`
 - Admin login: `https://cx-lgtm.github.io/Photos/admin/login`
 
+The GitHub Pages workflow publishes `404.html` as a copy of `index.html` so Vue router paths can load directly.
+
 Set the repository variable `VITE_API_BASE_URL` to your deployed backend URL so login, upload, comments, and article management can talk to Spring Boot.
 
 ## Backend

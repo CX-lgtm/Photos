@@ -38,7 +38,9 @@ jobs:
         env:
           VITE_BASE_PATH: /Photos/
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL || 'https://your-backend-domain.example/api' }}
-        run: npm run build
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html
 
       - name: Deploy to gh-pages
         env:
