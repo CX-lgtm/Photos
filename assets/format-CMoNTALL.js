@@ -1,0 +1,1 @@
+import{W as a}from"./index-B2epXNk6.js";function n(t){return t?a(t).format("YYYY-MM-DD"):"-"}function o(t){return t?a(t).format("YYYY-MM-DD HH:mm"):"-"}function s(t){return t?/^https?:\/\//i.test(t)?t:`${"https://your-backend-domain.example/api".replace(/\/api\/?$/,"")}${t.startsWith("/")?t:`/${t}`}`:""}export{s as a,o as b,n as f};
