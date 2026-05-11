@@ -1,5 +1,5 @@
 <script setup>
-import { Camera, LogIn } from '@element-plus/icons-vue'
+import { Camera, Key } from '@element-plus/icons-vue'
 </script>
 
 <template>
@@ -19,7 +19,7 @@ import { Camera, LogIn } from '@element-plus/icons-vue'
           <RouterLink to="/comments">Comment Board</RouterLink>
           <RouterLink to="/about">About Me</RouterLink>
           <RouterLink to="/admin/login" title="Admin login">
-            <el-icon><LogIn /></el-icon>
+            <el-icon><Key /></el-icon>
           </RouterLink>
         </nav>
       </div>
