@@ -41,6 +41,10 @@ jobs:
         run: |
           npm run build
           cp dist/index.html dist/404.html
+          for route in articles categories comments about admin admin/login admin/articles admin/articles/new admin/categories admin/tags admin/comments admin/images; do
+            mkdir -p "dist/${route}"
+            cp dist/index.html "dist/${route}/index.html"
+          done
 
       - name: Deploy to gh-pages
         env:
